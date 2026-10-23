@@ -1,0 +1,162 @@
+export type Category = "Next.js / React" | "Webflow" | "WordPress";
+export interface Project {
+  slug: string; name: string; cat: Category; year: number; role: string; hue: number;
+  desc: string; long: string; outcome: string; tags: string[]; img?: string; url?: string;
+}
+export interface Job { when: string; co: string; role: string; pts: string[] }
+
+const IMG = "https://cdn.prod.website-files.com/660e33b568fcce2f0dee9271/";
+
+export const SITE = {
+  name: "Sungkom Wongussapaiboon",
+  nick: "Pack",
+  email: "phenomenonex2@gmail.com",
+  linkedin: "https://www.linkedin.com/in/sungkom-wongussapaiboon-433091125/",
+  github: "https://github.com/phenomenonex2",
+  photo: "https://cdn.prod.website-files.com/660e33b568fcce2f0dee9216/67507618b32d789a09b66663_S__62308467.jpg",
+};
+
+export const CATS = ["All", "Next.js / React", "Webflow", "WordPress"] as const;
+export type Filter = (typeof CATS)[number];
+
+export const PROJECTS: Project[] = [
+  { slug: "vespa-thailand", name: "Vespa Thailand", cat: "Next.js / React", year: 2023, role: "Frontend Developer", hue: 150,
+    desc: "Information site for Italian-imported Vespa motorcycles, with sales and campaign pages.",
+    long: "Developed a complete Next.js and TypeScript frontend, integrating a backend for dynamic content and campaign management.",
+    outcome: "Delivered a high-performance website that significantly improved load times and marketing agility.",
+    tags: ["React.js", "Next.js", "TypeScript", "CMS"], img: IMG + "67506ea255277fa8ce04c1f2_vespa.avif" },
+  { slug: "run-active-thailand", name: "Run Active Thailand", cat: "Next.js / React", year: 2023, role: "Frontend Developer", hue: 20,
+    desc: "One-year campaign site promoting running across Thailand (now offline).",
+    long: "Developed a dynamic, highly interactive campaign website to track events and motivate participants.",
+    outcome: "Successfully supported the year-long campaign with a robust digital presence.",
+    tags: ["React.js", "Next.js", "Animations"], img: IMG + "67506ff49291876313a0728e_runActiveThailand.avif" },
+  { slug: "sc-asset-ruejai-club", name: "SC Asset Ruejai Club", cat: "Next.js / React", year: 2022, role: "Frontend Developer", hue: 200,
+    desc: "Customer-communication web app with an elegant, minimalist design (now offline).",
+    long: "Built a sleek, elegant, and minimalist web application using modern React and Next.js practices.",
+    outcome: "Provided a premium digital touchpoint for customers.",
+    tags: ["React.js", "Next.js", "TypeScript"], img: IMG + "6750702a9f1569726a80fd96_ruejaiclub.avif" },
+  { slug: "ergonoz", name: "Ergonoz", cat: "Webflow", year: 2024, role: "Webflow Developer", hue: 260, url: "https://ergonoz.com/",
+    desc: "Computer accessories: monitor arms, ergonomic chairs and cable accessories.",
+    long: "Built an interactive and visually appealing Webflow site highlighting product features, aimed at gamers and professionals.",
+    outcome: "Created a stunning product showcase that drove customer interest and highlighted their unique designs.",
+    tags: ["Webflow", "E-commerce", "Interactions"], img: IMG + "675072ca63ebaf29a7ecf8c8_trazer_5.jpg" },
+  { slug: "asset-pro-group", name: "Asset Pro Group", cat: "Webflow", year: 2024, role: "Webflow Developer", hue: 120,
+    desc: "Luxury housing projects that emphasize nature.",
+    long: "Built a visually immersive Webflow site highlighting property imagery, project locations, and lifestyle benefits.",
+    outcome: "Delivered a premium digital experience that aligns with their luxury brand positioning.",
+    tags: ["Webflow", "Real Estate"], img: IMG + "67507368e683d0681b9a226a_Screenshot%202567-12-04%20at%2022.19.48.png" },
+  { slug: "flow-assets", name: "Flow Assets", cat: "Webflow", year: 2023, role: "Webflow Developer", hue: 90,
+    desc: "Residential projects with simple, clean, natural designs.",
+    long: "Developed a Webflow site focusing on simplicity and tranquility, matching the architectural style of the homes.",
+    outcome: "Created a peaceful and user-friendly platform for potential homebuyers.",
+    tags: ["Webflow", "Real Estate"], img: IMG + "67507186ea2159a6888016ba_283080864_10159200730861501_2966437748753900846_n.png" },
+  { slug: "jiamphattana-energy", name: "Jiam Energy", cat: "Webflow", year: 2023, role: "Webflow Developer", hue: 50, url: "https://jiamenergy.co.th/",
+    desc: "Sales page design and development for Jiamphattana Energy.",
+    long: "Designed and developed a focused Webflow landing page optimized for conversion and search engine visibility.",
+    outcome: "Created a professional digital storefront that effectively captures customer inquiries.",
+    tags: ["Webflow", "Landing Page", "SEO"], img: IMG + "67506dcbd307a89aef84cdd4_jaimphattana-salepage.avif" },
+  { slug: "elpashaw", name: "Elpashaw", cat: "Webflow", year: 2024, role: "Webflow Developer", hue: 330, url: "https://elpashaw.com/",
+    desc: "Custom Webflow site with clean design and CMS-managed content.",
+    long: "Developed a custom Webflow website with a focus on clean design, intuitive navigation, and CMS integration for easy content management.",
+    outcome: "Launched a highly performant website that improved user engagement and brand perception.",
+    tags: ["Webflow", "Design", "CMS"] },
+  { slug: "paolhaokong", name: "Paolhaokong", cat: "Webflow", year: 2023, role: "Webflow Developer", hue: 10, url: "https://paolhaokong.com/",
+    desc: "Smooth animations and a user-friendly layout.",
+    long: "Designed and developed a Webflow site with smooth animations and a user-friendly layout.",
+    outcome: "Delivered a polished, responsive website that elevated their online visibility.",
+    tags: ["Webflow", "UI/UX Design"] },
+  { slug: "pmc-label-sustainability", name: "PMC Label Sustainability", cat: "Webflow", year: 2023, role: "Webflow Developer", hue: 140, url: "https://sustainability.pmclabel.com/",
+    desc: "Green-focused site communicating environmental impact.",
+    long: "Created a modern Webflow site with a green-focused aesthetic to clearly communicate their environmental impact.",
+    outcome: "Successfully launched a platform that strengthens their corporate social responsibility (CSR) messaging.",
+    tags: ["Webflow", "Responsive Design"] },
+  { slug: "shinsen-ichiba", name: "Shinsen Ichiba", cat: "Webflow", year: 2023, role: "Webflow Developer", hue: 0, url: "https://crftsco-shinsen-ichiba-dev.webflow.io/",
+    desc: "High-quality imagery, dynamic CMS menus and elegant typography.",
+    long: "Developed a Webflow site featuring high-quality imagery, dynamic CMS collections for menus, and elegant typography.",
+    outcome: "Enhanced the brand's premium image and provided an easy way for customers to explore their offerings.",
+    tags: ["Webflow", "CMS", "Interactions"] },
+  { slug: "somboon-seafood", name: "Somboon Seafood", cat: "Webflow", year: 2024, role: "Webflow Developer", hue: 30, url: "https://www.somboonseafood.com/",
+    desc: "Menu structure, branch locations and reservation information.",
+    long: "Built a responsive Webflow site with a clear menu structure, branch locations, and reservation information.",
+    outcome: "Improved online accessibility for tourists and streamlined the user journey for finding restaurant details.",
+    tags: ["Webflow", "CMS", "Localization"] },
+  { slug: "teach-for-thailand", name: "Teach For Thailand", cat: "Webflow", year: 2023, role: "Webflow Developer", hue: 210, url: "https://teachforthailand.org/",
+    desc: "Blog, success stories and donation integration for an education non-profit.",
+    long: "Developed a comprehensive Webflow site with dynamic CMS for blog posts, success stories, and donation integration.",
+    outcome: "Delivered an emotionally engaging and fast website that supports their mission of educational equity.",
+    tags: ["Webflow", "CMS", "Animations"] },
+  { slug: "highway", name: "Highway", cat: "Webflow", year: 2024, role: "Webflow Developer", hue: 240, url: "https://crftsco-highway-dev.webflow.io/",
+    desc: "Sleek, fast-loading site with custom interactions.",
+    long: "Built a sleek, fast-loading Webflow site with custom interactions and a clean layout.",
+    outcome: "Launched a robust website that serves as a strong foundation for their digital marketing efforts.",
+    tags: ["Webflow", "UI/UX"] },
+  { slug: "dvk-healthcare", name: "DVK Healthcare", cat: "Webflow", year: 2024, role: "Webflow Developer", hue: 180, url: "https://dvkhealthcare.com/",
+    desc: "Calming palette, clear information architecture, easy contact.",
+    long: "Developed a Webflow site with a calming color palette, clear information architecture, and easy contact options.",
+    outcome: "Established a professional online presence that instills trust in patients and partners.",
+    tags: ["Webflow", "Corporate Website"] },
+  { slug: "shop-senada-theory", name: "Shop Senada Theory", cat: "WordPress", year: 2022, role: "WordPress Developer", hue: 300, url: "https://shop.senadatheory.com/",
+    desc: "Customized WooCommerce store with optimized product discovery.",
+    long: "Customized a WooCommerce setup with tailored themes and optimized product discovery flows.",
+    outcome: "Delivered a seamless online store that drives conversions and reflects the brand's identity.",
+    tags: ["WordPress", "WooCommerce", "PHP", "CSS"] },
+  { slug: "senada-theory", name: "Senada Theory", cat: "WordPress", year: 2022, role: "WordPress Developer", hue: 320, url: "https://senadatheory.com/",
+    desc: "Custom theme with high-quality imagery and editorial layouts.",
+    long: "Developed a custom WordPress theme focused on high-quality imagery and editorial layouts.",
+    outcome: "Elevated the brand's digital presence with a visually striking and easy-to-manage website.",
+    tags: ["WordPress", "PHP", "HTML", "CSS"] },
+  { slug: "inaba-ciao", name: "Inaba Ciao", cat: "WordPress", year: 2023, role: "WordPress Developer", hue: 40, url: "https://www.inaba-ciao.com/",
+    desc: "Custom product catalogs with a playful, brand-aligned design.",
+    long: "Built a responsive WordPress site with custom product catalogs and a playful, brand-aligned design.",
+    outcome: "Created an engaging platform that effectively informs pet owners about product benefits.",
+    tags: ["WordPress", "PHP", "Responsive Design"] },
+  { slug: "wang-tokang-yaowarat", name: "Wang Tokang Yaowarat", cat: "WordPress", year: 2022, role: "WordPress Developer", hue: 45, url: "https://หวังโต๊ะกังเยาวราช.com",
+    desc: "Gold jewelry collections and daily prices.",
+    long: "Developed a secure and easy-to-navigate WordPress site showcasing gold jewelry collections and daily prices.",
+    outcome: "Successfully modernized a traditional business, improving customer access and trust online.",
+    tags: ["WordPress", "PHP", "E-Commerce"] },
+  { slug: "y-jewelry-thailand", name: "Y Jewelry Thailand", cat: "WordPress", year: 2023, role: "WordPress Developer", hue: 280, url: "https://yjewelrythailand.com",
+    desc: "Luxurious WooCommerce site with high-resolution product galleries.",
+    long: "Created a custom WooCommerce website with a luxurious design, focusing on high-resolution product galleries.",
+    outcome: "Launched a sophisticated e-commerce platform that enhances the premium feel of the products.",
+    tags: ["WordPress", "WooCommerce", "Design"] },
+];
+
+export const SKILLS: Record<string, string[]> = {
+  Frontend: ["React", "Next.js", "TypeScript", "JavaScript", "HTML5", "CSS3", "Tailwind CSS", "SCSS", "Styled Components", "Redux", "React Query", "Zustand", "Responsive Design", "Accessibility", "Performance", "SEO", "SSR", "SSG", "ISR"],
+  "Backend & CMS": ["Node.js", "PostgreSQL", "REST API", "Strapi", "MedusaJS", "Webflow", "WordPress", "WooCommerce", "Headless CMS"],
+  "Tools & Perf": ["Git", "Figma", "Lighthouse", "Core Web Vitals", "Webpack", "Agile / Scrum", "AI-assisted dev"],
+};
+
+export const MILESTONES: [string, string, string][] = [
+  ["2015", "Started Web Development", "HTML, CSS, JavaScript and PHP. First client websites."],
+  ["2018", "React", "Moved to the modern JS ecosystem and shipped first React apps."],
+  ["2020", "Next.js / TypeScript", "SSR/SSG with Next.js, type safety with TypeScript."],
+  ["2022", "Headless CMS", "Strapi, WordPress REST API and Webflow in decoupled architectures."],
+  ["2024", "Full Stack", "Node.js APIs, PostgreSQL, authentication."],
+  ["2026", "AI & Modern Web", "LLMs in product workflows, AI-augmented development."],
+];
+
+export const EXPERIENCE: Job[] = [
+  { when: "2020 — Now", co: "Craftsmanship Co.", role: "Frontend Developer", pts: [
+    "Delivered 35+ responsive sites and web apps with React.js, Next.js, TypeScript, Webflow and WordPress.",
+    "Architected Headless CMS solutions with Strapi and MedusaJS.",
+    "Improved performance by up to 45% via lazy loading, code splitting, image optimization and SEO.",
+    "Maintained 30+ production websites; converted Figma designs into pixel-perfect UIs." ] },
+  { when: "2019 — 2020", co: "Smoothlane Co., Ltd", role: "Frontend Developer", pts: [
+    "Custom WordPress themes and full-stack solutions for organizational websites.",
+    "SEO/SEM strategy that grew organic traffic by 60%." ] },
+  { when: "2018 — 2019", co: "Appbit Studio", role: "Frontend Developer", pts: ["Responsive, cross-browser WordPress sites and post-launch enhancements."] },
+  { when: "2017 — 2018", co: "Eflowsys Co., Ltd", role: "Frontend Developer", pts: ["User-friendly websites with modern design standards for client projects."] },
+  { when: "2016 — 2017", co: "TakeMeTour", role: "Frontend Developer", pts: ["Startup tourism website (React.js) showcasing hidden gems of Thailand to a global audience."] },
+  { when: "2014 — 2016", co: "Winstartech Co., Ltd", role: "Web Designer", pts: ["Website design with hands-on HTML, CSS, JavaScript and PHP."] },
+];
+
+export const SERVICES: [string, string][] = [
+  ["Frontend Development", "React & Next.js apps built for performance, scalability and maintainability."],
+  ["Full Stack Development", "Node.js APIs, database design and authentication, schema to deploy."],
+  ["Landing Pages", "High-converting pages optimized for Core Web Vitals."],
+  ["Performance Optimization", "Lighthouse audit to action plan: bundle, images, caching."],
+  ["WordPress / Webflow", "Custom themes, CMS and headless setups."],
+  ["Technical Consulting", "Architecture review, stack decisions, code review."],
+];
