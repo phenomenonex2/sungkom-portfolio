@@ -111,7 +111,7 @@ export const PROJECTS: Project[] = [
     desc: "Gold jewelry collections and daily prices.",
     long: "Developed a secure and easy-to-navigate WordPress site showcasing gold jewelry collections and daily prices.",
     outcome: "Successfully modernized a traditional business, improving customer access and trust online.",
-    tags: ["WordPress", "PHP", "E-Commerce"] },
+    tags: ["WordPress", "PHP", "E-Commerce"], img: LOCAL + "wang-tokang-yaowarat.webp" },
   { slug: "y-jewelry-thailand", name: "Y Jewelry Thailand", cat: "WordPress", year: 2023, role: "WordPress Developer", hue: 280, url: "https://yjewelrythailand.com",
     desc: "Luxurious WooCommerce site with high-resolution product galleries.",
     long: "Created a custom WooCommerce website with a luxurious design, focusing on high-resolution product galleries.",
