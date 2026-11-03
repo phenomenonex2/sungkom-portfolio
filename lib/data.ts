@@ -117,6 +117,11 @@ export const PROJECTS: Project[] = [
     long: "Created a custom WooCommerce website with a luxurious design, focusing on high-resolution product galleries.",
     outcome: "Launched a sophisticated e-commerce platform that enhances the premium feel of the products.",
     tags: ["WordPress", "WooCommerce", "Design"], img: LOCAL + "y-jewelry-thailand.webp" },
+  { slug: "hypothesis", name: "Hypothesis", cat: "WordPress", year: 2023, role: "WordPress Developer", hue: 30, url: "https://hypothesis.co.th/",
+    desc: "Portfolio site for a design studio covering architecture, interiors, branding and exhibitions.",
+    long: "Built a WordPress site that presents the studio's works by category, with project pages showing location, category, year, area and image galleries.",
+    outcome: "Gave the studio a clean, image-led platform to showcase its projects.",
+    tags: ["WordPress", "PHP", "Portfolio"], img: LOCAL + "hypothesis.webp" },
 ];
 
 export const SKILLS: Record<string, string[]> = {
