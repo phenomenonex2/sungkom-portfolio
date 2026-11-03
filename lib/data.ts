@@ -15,7 +15,7 @@ export const SITE = {
   email: "phenomenonex2@gmail.com",
   linkedin: "https://www.linkedin.com/in/sungkom-wongussapaiboon-433091125/",
   github: "https://github.com/phenomenonex2",
-  photo: "https://cdn.prod.website-files.com/660e33b568fcce2f0dee9216/67507618b32d789a09b66663_S__62308467.jpg",
+  photo: (process.env.NEXT_PUBLIC_BASE_PATH || "") + "/about.jpg",
 };
 
 export const CATS = ["All", "Next.js / React", "Webflow", "WordPress"] as const;
