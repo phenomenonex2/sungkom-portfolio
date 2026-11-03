@@ -6,6 +6,8 @@ export interface Project {
 export interface Job { when: string; co: string; role: string; pts: string[] }
 
 const IMG = "https://cdn.prod.website-files.com/660e33b568fcce2f0dee9271/";
+// files in /public are not auto-prefixed with basePath when used in a plain <img>
+const LOCAL = (process.env.NEXT_PUBLIC_BASE_PATH || "") + "/projects/";
 
 export const SITE = {
   name: "Sungkom Wongussapaiboon",
@@ -99,7 +101,7 @@ export const PROJECTS: Project[] = [
     desc: "Customized WooCommerce store with optimized product discovery.",
     long: "Customized a WooCommerce setup with tailored themes and optimized product discovery flows.",
     outcome: "Delivered a seamless online store that drives conversions and reflects the brand's identity.",
-    tags: ["WordPress", "WooCommerce", "PHP", "CSS"] },
+    tags: ["WordPress", "WooCommerce", "PHP", "CSS"], img: LOCAL + "shop-senada-theory.webp" },
   { slug: "senada-theory", name: "Senada Theory", cat: "WordPress", year: 2022, role: "WordPress Developer", hue: 320, url: "https://senadatheory.com/",
     desc: "Custom theme with high-quality imagery and editorial layouts.",
     long: "Developed a custom WordPress theme focused on high-quality imagery and editorial layouts.",
