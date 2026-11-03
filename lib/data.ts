@@ -116,7 +116,7 @@ export const PROJECTS: Project[] = [
     desc: "Luxurious WooCommerce site with high-resolution product galleries.",
     long: "Created a custom WooCommerce website with a luxurious design, focusing on high-resolution product galleries.",
     outcome: "Launched a sophisticated e-commerce platform that enhances the premium feel of the products.",
-    tags: ["WordPress", "WooCommerce", "Design"] },
+    tags: ["WordPress", "WooCommerce", "Design"], img: LOCAL + "y-jewelry-thailand.webp" },
 ];
 
 export const SKILLS: Record<string, string[]> = {
