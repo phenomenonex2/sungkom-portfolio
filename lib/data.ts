@@ -42,7 +42,7 @@ export const PROJECTS: Project[] = [
     long: "Built an interactive and visually appealing Webflow site highlighting product features, aimed at gamers and professionals.",
     outcome: "Created a stunning product showcase that drove customer interest and highlighted their unique designs.",
     tags: ["Webflow", "E-commerce", "Interactions"], img: IMG + "675072ca63ebaf29a7ecf8c8_trazer_5.jpg" },
-  { slug: "asset-pro-group", name: "Asset Pro Group", cat: "Webflow", year: 2024, role: "Webflow Developer", hue: 120,
+  { slug: "asset-pro-group", name: "Asset Pro Group", cat: "Webflow", year: 2024, role: "Webflow Developer", hue: 120, url: "https://assetprogroup.co/",
     desc: "Luxury housing projects that emphasize nature.",
     long: "Built a visually immersive Webflow site highlighting property imagery, project locations, and lifestyle benefits.",
     outcome: "Delivered a premium digital experience that aligns with their luxury brand positioning.",

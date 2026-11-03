@@ -36,8 +36,8 @@ header.nav{position:fixed;inset:0 0 auto 0;z-index:100;display:flex;justify-cont
 .hero{min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:60px;position:relative;overflow:hidden}
 .orb{position:absolute;width:min(60vw,700px);aspect-ratio:1;border-radius:50%;right:-10%;top:8%;background:radial-gradient(circle at 35% 35%,var(--acc),#3b5a00 55%,transparent 70%);filter:blur(70px);opacity:.35;pointer-events:none}
 .grid-bg{position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:80px 80px;opacity:.35;mask-image:radial-gradient(ellipse at 50% 40%,#000 20%,transparent 75%)}
-.hero h1{font-size:clamp(34px,10vw,190px);position:relative}
-.hero h1 .ln{display:block;overflow:hidden;padding-bottom:.08em}
+.hero h1{font-size:clamp(28px,calc((min(100vw,1500px) - 2*var(--g))/9.8),190px);position:relative}
+.hero h1 .ln{display:block;white-space:nowrap;overflow:hidden;padding-bottom:.08em}
 .hero h1 .ch{display:inline-block;will-change:transform}
 .hero .role{display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin-top:34px;font-size:clamp(18px,2.2vw,28px);position:relative}
 .pill{display:inline-flex;gap:8px;align-items:center;padding:6px 14px;border:1px solid var(--line);border-radius:99px;font-size:14px;color:var(--mut)}
