@@ -69,8 +69,11 @@ export default function Home() {
 
       ScrollTrigger.matchMedia({ "(min-width: 861px)": () => {
         const tr = root.current!.querySelector<HTMLElement>("#track")!;
-        gsap.to(tr, { x: () => -(tr.scrollWidth - innerWidth + 40), ease: "none",
-          scrollTrigger: { trigger: ".ms", pin: true, scrub: 0.6, start: "top top", end: () => "+=" + tr.scrollWidth, invalidateOnRefresh: true } });
+        // The track sits inside a centered, padded .wrap, so it starts left of 0 by that offset:
+        // travel = (offset from viewport left + content width) - viewport width + right gutter.
+        const dist = () => tr.getBoundingClientRect().left - (gsap.getProperty(tr, "x") as number) + tr.scrollWidth - innerWidth + 40;
+        gsap.to(tr, { x: () => -dist(), ease: "none",
+          scrollTrigger: { trigger: ".ms", pin: true, scrub: 0.6, start: "top top", end: () => "+=" + dist(), invalidateOnRefresh: true } });
       } });
 
       reveal(root.current!, ".lead, .sk, .job, .svc div, .card, .cta > *");
