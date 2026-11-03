@@ -106,7 +106,7 @@ export const PROJECTS: Project[] = [
     desc: "Custom product catalogs with a playful, brand-aligned design.",
     long: "Built a responsive WordPress site with custom product catalogs and a playful, brand-aligned design.",
     outcome: "Created an engaging platform that effectively informs pet owners about product benefits.",
-    tags: ["WordPress", "PHP", "Responsive Design"] },
+    tags: ["WordPress", "PHP", "Responsive Design"], img: LOCAL + "inaba-ciao.webp" },
   { slug: "wang-tokang-yaowarat", name: "Wang Tokang Yaowarat", cat: "WordPress", year: 2022, role: "WordPress Developer", hue: 45, url: "https://หวังโต๊ะกังเยาวราช.com",
     desc: "Gold jewelry collections and daily prices.",
     long: "Developed a secure and easy-to-navigate WordPress site showcasing gold jewelry collections and daily prices.",
