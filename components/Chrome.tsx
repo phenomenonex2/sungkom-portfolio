@@ -29,7 +29,10 @@ export default function Chrome() {
       store.set("nav", "1");
       // timeout fallback: rAF is paused in background tabs, so never rely on the tween alone
       let done = false;
-      const go = () => { if (!done) { done = true; router.push(a.pathname + a.hash); } };
+      // a.pathname already contains the basePath, but router.push prepends it again
+      const base = process.env.NEXT_PUBLIC_BASE_PATH || "";
+      const route = (base && a.pathname.startsWith(base) ? a.pathname.slice(base.length) : a.pathname) || "/";
+      const go = () => { if (!done) { done = true; router.push(route + a.hash); } };
       gsap.fromTo("#wipe", { yPercent: 100 }, { yPercent: 0, duration: 0.55, ease: "power4.inOut", onComplete: go });
       setTimeout(go, 900);
     };
