@@ -135,7 +135,7 @@ export const MILESTONES: [string, string, string][] = [
 ];
 
 export const EXPERIENCE: Job[] = [
-  { when: "2020 — Now", co: "Craftsmanship Co.", role: "Frontend Developer", pts: [
+  { when: "2020 — Aug 2026", co: "Craftsmanship Co.", role: "Frontend Developer", pts: [
     "Delivered 35+ responsive sites and web apps with React.js, Next.js, TypeScript, Webflow and WordPress.",
     "Architected Headless CMS solutions with Strapi and MedusaJS.",
     "Improved performance by up to 45% via lazy loading, code splitting, image optimization and SEO.",
